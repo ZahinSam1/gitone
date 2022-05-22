@@ -24,13 +24,10 @@ class otpEnterActivity : AppCompatActivity() {
 
     private var auth = FirebaseAuth.getInstance()
     private var phoneNumber = ""
+    private var verifyId : String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otp_enter)
-
-
-
-
 
             btn_sendButton.setOnClickListener{
 
@@ -53,15 +50,20 @@ class otpEnterActivity : AppCompatActivity() {
                         }
                         override fun  onCodeSent(verificationId: String, token: PhoneAuthProvider.ForceResendingToken) {
                             btn_sendButton.visibility = View.VISIBLE
+
                             val intent = Intent(applicationContext, otpVarificationActivity::class.java)
                             intent.putExtra("phoneNumber", et_numberText.text.toString())
                             intent.putExtra("verificationId", verificationId)
+                            //Toast.makeText(this@otpEnterActivity, "veri id = ${verificationId}", Toast.LENGTH_LONG).show()
+                            //verifyId = verificationId
                             startActivity(intent)
                         }
                     }
+                    //Log.d(TAG, "\n\n varification id = ${verifyId} \n\n")
+                    //print("verification id = ${verifyId}")
 
                     val options = PhoneAuthOptions.newBuilder(auth)
-                        .setPhoneNumber("+880"+ phoneNumber.trim())       // Phone number to verify
+                        .setPhoneNumber("+880"+ phoneNumber)       // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(this)                 // Activity (for callback binding)
                         .setCallbacks(callbacks)          // OnVerificationStateChangedCallbacks

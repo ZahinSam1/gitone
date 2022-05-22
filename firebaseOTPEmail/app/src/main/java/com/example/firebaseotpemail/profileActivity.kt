@@ -11,6 +11,6 @@ class profileActivity : AppCompatActivity() {
 
         val phnNumber : String = intent.getStringExtra("phone").toString()
 
-        tv_phonNumberShow.text = String.format("+880-%s", phnNumber.trim())
+        tv_phonNumberShow.text = "+880-${phnNumber}"
     }
 }
