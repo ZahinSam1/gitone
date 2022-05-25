@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseOTPEmail">
         <activity
+            android:name=".ImageUpload"
+            android:exported="false" />
+        <activity
             android:name=".profileActivity"
             android:exported="false" />
         <activity

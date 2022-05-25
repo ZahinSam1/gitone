@@ -3,6 +3,7 @@ package com.example.firebaseotpemail
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_image_upload.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +14,10 @@ class MainActivity : AppCompatActivity() {
         btn_usingPhone.setOnClickListener{
             startActivity(Intent(this, otpEnterActivity::class.java))
         }
+
+        btn_upImg.setOnClickListener({
+            startActivity(Intent(this, ImageUpload::class.java))
+        })
 
     }
 }

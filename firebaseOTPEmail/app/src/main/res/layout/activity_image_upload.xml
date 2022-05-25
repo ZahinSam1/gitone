@@ -4,43 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ImageUpload">
 
     <TextView
-        android:id="@+id/tv_mainTitle"
-        android:layout_width="211dp"
-        android:layout_height="52dp"
-        android:text="Login to your Account"
-        android:gravity="center"
-        android:textSize="20sp"
+        android:id="@+id/tv_upImgTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload your Image here"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095" />
+        app:layout_constraintVertical_bias="0.123" />
 
     <Button
-        android:id="@+id/btn_usingPhone"
-        android:layout_width="210dp"
-        android:layout_height="54dp"
-        android:text="Login Using Phone"
+        android:id="@+id/btn_uploadImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_mainTitle"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_upImgTitle"
+        app:layout_constraintVertical_bias="0.13" />
 
-    <Button
-        android:id="@+id/btn_upImg"
-        android:layout_width="210dp"
-        android:layout_height="54dp"
-        android:text="Upload Image"
+    <ImageView
+        android:id="@+id/iv_uploadedPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_usingPhone"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_uploadImage"
+        tools:srcCompat="@tools:sample/avatars" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
