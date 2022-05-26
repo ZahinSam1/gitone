@@ -15,9 +15,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, otpEnterActivity::class.java))
         }
 
-        btn_upImg.setOnClickListener({
+        btn_upImg.setOnClickListener {
             startActivity(Intent(this, ImageUpload::class.java))
-        })
+        }
+
+        btn_register.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
 
     }
 }

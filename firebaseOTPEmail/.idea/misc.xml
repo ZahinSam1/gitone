@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Dev/firebaseOTPEmail/app/src/main/res/layout/activity_get_data.xml" value="0.264" />
         <entry key="..\:/Android Dev/firebaseOTPEmail/app/src/main/res/layout/activity_image_upload.xml" value="0.25" />
         <entry key="..\:/Android Dev/firebaseOTPEmail/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Android Dev/firebaseOTPEmail/app/src/main/res/layout/activity_otp_enter.xml" value="0.25" />
         <entry key="..\:/Android Dev/firebaseOTPEmail/app/src/main/res/layout/activity_otp_varification.xml" value="0.25" />
         <entry key="..\:/Android Dev/firebaseOTPEmail/app/src/main/res/layout/activity_profile.xml" value="0.176" />
+        <entry key="..\:/Android Dev/firebaseOTPEmail/app/src/main/res/layout/activity_register.xml" value="0.25" />
       </map>
     </option>
   </component>

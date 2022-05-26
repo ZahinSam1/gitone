@@ -56,27 +56,12 @@ class ImageUpload : AppCompatActivity() {
             //iv_uploadedPic.setImageURI(imageUri)
 
             uploadPicture();
-            
+
 
         }
     }
 
     private fun uploadPicture() {
-        /*var randomKey : String = UUID.randomUUID().toString()
-
-        val mountainsRef = storageReference.child("image/${randomKey}")
-
-// Create a reference to 'images/mountains.jpg'
-        val mountainImagesRef = storageReference.child("images/mountains.jpg")
-
-// While the file names are the same, the references point to different files
-        mountainsRef.name == mountainImagesRef.name // true
-        mountainsRef.path == mountainImagesRef.path // false
-
-        mountainImagesRef.putFile(imageUri)
-            .addOnSuccessListener(OnSuccessListener<UploadTask.TaskSnapshot>()) {
-
-            }*/
 
         val pd = ProgressDialog(this)
         pd.setMessage("Uploading Image...")
