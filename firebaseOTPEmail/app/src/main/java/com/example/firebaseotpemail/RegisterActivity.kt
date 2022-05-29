@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_register.*
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var database : DatabaseReference
+    private lateinit var username : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +23,7 @@ class RegisterActivity : AppCompatActivity() {
             val lastName = et_lastName.text.toString()
             val age = et_age.text.toString()
             val phnNum = et_phnNumber.text.toString()
-            val username = et_UserName.text.toString()
+            username = et_UserName.text.toString()
 
             database = FirebaseDatabase.getInstance().getReference("Users")
 
@@ -45,7 +46,9 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         btn_fetchData.setOnClickListener {
-            startActivity(Intent(this, GetData::class.java))
+            val intent = Intent(this, GetData::class.java)
+            intent.putExtra("username", username)
+            startActivity(intent)
         }
     }
 }
